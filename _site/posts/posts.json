@@ -34,20 +34,20 @@
     "input_file": {}
   },
   {
-    "path": "posts/welcome/",
-    "title": "Welcome to My Portfolio ",
-    "description": "Welcome to our new blog, My Portfolio . We hope you enjoy \nreading what we have to say!",
+    "path": "posts/2021-04-20-welcome-to-my-site/",
+    "title": "Welcome to my site",
+    "description": "Welcome to Arielle Ostry’s data journalism portfolio. This site is a culmination of the work and skills Arielle has gained throughout her Reporting in the Digital Agee class at The George Washington University’s School of Media and Public Affairs.",
     "author": [
       {
-        "name": "Nora Jones",
-        "url": "https://example.com/norajones"
+        "name": "Arielle Ostry",
+        "url": "https://ostryarielle.wixsite.com/mysite"
       }
     ],
-    "date": "2021-04-13",
+    "date": "2021-04-12",
     "categories": [],
     "contents": "\n\n\n\n",
     "preview": {},
-    "last_modified": "2021-04-13T19:42:03-04:00",
-    "input_file": {}
+    "last_modified": "2021-04-20T00:07:48-04:00",
+    "input_file": "welcome-to-my-site.utf8.md"
   }
 ]
