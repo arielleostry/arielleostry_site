@@ -29,6 +29,12 @@ library(readxl)
 complaints <- readRDS("complaints.rds")
 ```
 
+Complaints for this analysis were sourced from The Consumer Financial Protection Bureau (CFPB).
+
+This first chart shows which companies had the most complaints out of the data selected. In order to create this visual, I first grouped the data by company and then arranged the companies in descending order. 
+
+After filtering for the top three companies in this dataset, I created a bar graph using plot_ly.
+
 ### Chart 1
 
 ```{r}
@@ -53,6 +59,10 @@ fig1
 
 
 ```
+
+This second chart shows how companies tend to respond to complaints using a donut graph to show percentages out of the whole. I grouped by company response to the consumer and cleaned up the data by filtering out blank observations. 
+
+I then created the donut graph using plot_ly.
 
 ### Chart 2
 
@@ -85,6 +95,12 @@ fig2
 #experiencing a similar issue to fig1 where it is difficult to read some of the numbers without hovering over... not sure how to fix the situation... perhaps a legend would make more sense?
 ```
     
+This third chart looks at the number of complaints throughout the year, so you can see which months had more complaints and which had less. 
+
+In order to develop this graph, I added a month column to the dataset and grouped by it. 
+
+The line graph was also made through plot_ly.
+
 ### Chart 3
 
 ```{r}
