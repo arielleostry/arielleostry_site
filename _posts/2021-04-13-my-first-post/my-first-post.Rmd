@@ -1,7 +1,7 @@
 ---
-title: "My first post"
+title: "Company Complaints Analysis"
 description: |
-  A short description of the post.
+  These charts and data tables pull out and visualize key elements of a consumer complaints report from 2020. 
 author:
   - name: Arielle Ostry
     url: https://www.google.com
@@ -14,16 +14,97 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(flexdashboard)
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(glue)
+library(plotly)
+library(DT)
+library(kableExtra)
+library(htmlwidgets)
+library(htmltools)
+library(readxl)
+
+complaints <- readRDS("complaints.rds")
 ```
 
-This is my first test post in building a Distill site.
-
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+### Chart 1
 
 ```{r}
-head(mtcars)
+Companies_with_most_complaints <- complaints %>% select(company) %>% 
+                                group_by(company) %>%                                                 summarise(amount_complaints = n()) %>%                                 arrange(desc(amount_complaints))
+
+Top3_complaints <- Companies_with_most_complaints %>% filter(amount_complaints>10000)
+
+#the code above is isolating the company variable in the complaints dataset, we will use this simplified dataset to create a chart in plot_ly to visually show the top companies responsible for the complaints
+
+fig1 <- plot_ly(data = Top3_complaints, x = ~amount_complaints, y = ~company, type = 'bar', name = '2020 Companies with the Most Complaints')
+
+fig1 <- fig1 %>% layout(
+                title = "2020 Companies with the Most Complaints",
+                xaxis = list(title = "Number of Complaints"),
+                yaxis = list(title = "")
+)
+
+fig1
+
+#code above makes a bar graph which shows the three companies with the most complaints; I had trouble with making the companies themselves readable, but if you hover over the bars they pop up... maybe we could discuss this in class?
 
 
 ```
 
+### Chart 2
+
+```{r}
+#data prep - borrowed from initial analysis markdown file
+
+company_response <- complaints %>% 
+  select(company_response_to_consumer) %>% 
+  group_by(company_response_to_consumer) %>% 
+  summarise(r = n()) 
+
+company_response_clean <- filter(company_response, r > 1)
+
+#data visualization - donut chart to show the percentage of company responses to complaints
+
+fig2 <- company_response_clean %>% plot_ly(labels = 
+                    ~company_response_to_consumer, values = ~r)
+
+fig2 <- fig2 %>% add_pie(hole = 0.6)
+
+fig2 <- fig2 %>% layout(
+                  title = "How companies respond to complaints",  
+                  showlegend = F,
+                  xaxis = list(showgrid = FALSE, zeroline = FALSE, 
+                               showticklabels = FALSE),
+                  yaxis = list(showgrid = FALSE, zeroline = FALSE, 
+                               showticklabels = FALSE))
+fig2
+
+#experiencing a similar issue to fig1 where it is difficult to read some of the numbers without hovering over... not sure how to fix the situation... perhaps a legend would make more sense?
+```
+    
+### Chart 3
+
+```{r}
+complaints_with_month <- complaints %>% mutate(month = month(date_received))
+
+complaints_over_year <- complaints_with_month %>% group_by(month) %>%
+  summarise(count_by_month = n()) %>% 
+  select(month, count_by_month)
+
+#organizes data into month and number of observations
+
+fig3 <- plot_ly(complaints_over_year, x = ~month, y = ~count_by_month, type = 'scatter', mode = 'lines')
+
+fig3 <- fig3 %>%  
+  layout(title = 'Number of Complaints per Month', 
+           yaxis = list(title = 'Number of Complaints'), 
+          xaxis = list(title = 'Month') )
+                       
+fig3
+
+#line graph shows number of complaints received per month throughout the year
+```
 

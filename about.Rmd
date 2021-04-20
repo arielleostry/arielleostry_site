@@ -2,7 +2,8 @@
 title: "About me"
 description: |
   Arielle Ostry is a graduating senior at The George Washington University studying journalism and dance. This site, created through Distill, shows Arielle's capabilities in data visualization after completing her advanced news reporting course on reporting in a digital world. 
-  Arielle sports a variety of topical interests, and particularly enjoys projects focused on environmental advocacy.
+   Arielle sports a variety of topical interests, and particularly enjoys projects focused on environmental advocacy.
+   If you have any questions about Arielle's work, you can contact her through LinkedIn or Twitter.
 ---
 
 ```{r setup, include=FALSE}
