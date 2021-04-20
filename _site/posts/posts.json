@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-04-13-my-second-post/",
+    "title": "Mapping out DC Landmarks",
+    "description": "This short project showcases where certain famous DC landmarks are located in the District.",
+    "author": [
+      {
+        "name": "Arielle Ostry",
+        "url": "https://ostryarielle.wixsite.com/mysite"
+      }
+    ],
+    "date": "2021-04-20",
+    "categories": [],
+    "contents": "\nOur Landmarks Table\nFeaturing four popular DC locations including the Lincoln Memorial, Union Station, the National Portrait Gallery, and the U.S. Capitol.\n\n# A tibble: 4 x 3\n  Name                      Latitude Longitude\n  <chr>                        <dbl>     <dbl>\n1 Lincoln Memorial              38.9     -77.1\n2 Union Station                 38.9     -77.0\n3 National Portrait Gallery     38.9     -77.0\n4 United States Capitol         38.9     -77.0\n\nOur Map\nWith the information provided from the table above (landmark name and location), we are then able to create a map using leaflet which will pinpoint the exact location of these places and label them on the resulting map.\n\n\n{\"x\":{\"options\":{\"crs\":{\"crsClass\":\"L.CRS.EPSG3857\",\"code\":null,\"proj4def\":null,\"projectedBounds\":null,\"options\":{}}},\"calls\":[{\"method\":\"addProviderTiles\",\"args\":[\"Stamen.TonerLite\",null,null,{\"errorTileUrl\":\"\",\"noWrap\":false,\"detectRetina\":false}]},{\"method\":\"addCircles\",\"args\":[[38.889248,38.897095,38.8978267,38.8899389],[-77.050636,-77.006332,-77.0252077,-77.0112392],10,null,null,{\"interactive\":true,\"className\":\"\",\"stroke\":true,\"color\":\"#03F\",\"weight\":12,\"opacity\":0.5,\"fill\":true,\"fillColor\":\"#03F\",\"fillOpacity\":1},null,null,null,{\"interactive\":false,\"permanent\":false,\"direction\":\"auto\",\"opacity\":1,\"offset\":[0,0],\"textsize\":\"10px\",\"textOnly\":false,\"className\":\"\",\"sticky\":true},null,null]},{\"method\":\"addControl\",\"args\":[\"Location of DC Landmarks\",\"topright\",null,\"info legend\"]}],\"setView\":[[38.8935128,-77.0346613],12.5,[]],\"limits\":{\"lat\":[38.889248,38.8978267],\"lng\":[-77.050636,-77.006332]}},\"evals\":[],\"jsHooks\":[]}\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-04-20T00:53:18-04:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-04-13-my-first-post/",
     "title": "Company Complaints Analysis",
     "description": "These charts and data tables pull out and visualize key elements of a consumer complaints report from 2020.",
@@ -17,23 +34,6 @@
     "input_file": {}
   },
   {
-    "path": "posts/2021-04-13-my-second-post/",
-    "title": "My second post",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "Arielle Ostry",
-        "url": "https://www.google.com"
-      }
-    ],
-    "date": "2021-04-13",
-    "categories": [],
-    "contents": "\nThis is my second post using Distill.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-04-13T20:31:00-04:00",
-    "input_file": {}
-  },
-  {
     "path": "posts/2021-04-20-welcome-to-my-site/",
     "title": "Welcome to my site",
     "description": "Welcome to Arielle Ostry’s data journalism portfolio. This site is a culmination of the work and skills Arielle has gained throughout her Reporting in the Digital Agee class at The George Washington University’s School of Media and Public Affairs.",
@@ -48,6 +48,6 @@
     "contents": "\n\n\n\n",
     "preview": {},
     "last_modified": "2021-04-20T00:07:48-04:00",
-    "input_file": "welcome-to-my-site.utf8.md"
+    "input_file": {}
   }
 ]

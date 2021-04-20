@@ -1,11 +1,11 @@
 ---
-title: "My second post"
+title: "Mapping out DC Landmarks"
 description: |
-  A short description of the post.
+  This short project showcases where certain famous DC landmarks are located in the District. 
 author:
   - name: Arielle Ostry
-    url: https://www.google.com
-date: 04-13-2021
+    url: https://ostryarielle.wixsite.com/mysite
+date: 04-20-2021
 output:
   distill::distill_article:
     self_contained: false
@@ -13,8 +13,51 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+# Load packages
+library(tidyverse)
+library(lubridate)
+library(readxl)
+library(janitor)
+library(glue)
+library(leaflet)
+library(RColorBrewer)
+library(htmlwidgets)
+library(htmltools)
+library(tigris)
+library(tmap)
+library(tmaptools)
+library(rmarkdown)
+options(tigris_class = "sf")
+
+#your code here
+
+Landmarks_DC <- read_excel("Landmarks_DC.xlsx")
+
 ```
 
-This is my second post using Distill.
+**Our Landmarks Table**  
+Featuring four popular DC locations including the Lincoln Memorial, Union Station, the National Portrait Gallery, and the U.S. Capitol.
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+```{r}
+head(Landmarks_DC)
+```
+
+
+**Our Map**  
+With the information provided from the table above (landmark name and location), we are then able to create a map using leaflet which will pinpoint the exact location of these places and label them on the resulting map.
+
+```{r}
+Landmarks_map <- leaflet(Landmarks_DC) %>% 
+  addProviderTiles(providers$Stamen.TonerLite) %>% 
+  setView(-77.0346613, 38.8935128, zoom = 12.5) %>% 
+  addCircles(lng = ~Longitude,
+             lat = ~Latitude,
+             weight = 12,
+             fillOpacity = 1) %>% 
+  addControl("Location of DC Landmarks", position = "topright")
+
+Landmarks_map
+
+#Code above shows the 4 points mapped out on the DC map using the latitude and longitude provided from the dataset
+#the points are weighted at 10 in order to be seen clearly with an opacity of 1, and "Location of DC Landmarks was placed in the corner of the map in order to explain what was being shown with the points on the map
+```
