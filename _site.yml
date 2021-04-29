@@ -16,6 +16,8 @@ navbar:
       href: skills.html
     - text: "Work Samples"
       menu:
+        - text: "Trending Video Analysis"
+          href: trending-youtube.html
         - text: "Harris Campaign Trips"
           href: kamala-campaign-trips.html
         - text: "Estuaries Week"

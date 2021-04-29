@@ -1,0 +1,92 @@
+---
+title: "Trending YouTube Videos"
+description: |
+  An analysis of trending YouTube videos made using STATA.
+author:
+  - name: Arielle Ostry 
+    url: https://arielleostry.netlify.app/
+    affiliation: The George Washington University
+    affiliation_url: https://www.gwu.edu/
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+**What is Trending and Who is Watching: YouTube Differences Around the World**
+
+With new streaming and content sharing services making information and entertainment so accessible, how internet users engage with online media and what sort of content they engage with can reveal a lot about how people from different places act and what they value.  
+
+The platform YouTube in particular exposes ways in which users from different countries are similar, as well as ways in which they differ. 
+
+In a recent analysis investigating trending YouTube videos from a host of different countries, a big question that researchers wanted to answer was if there were any substantial differences concerning users and the content itself.
+
+In figures 1 and 2 respectively, one can see the disparity in range as well as the average amount of views and likes from nine different countries.
+
+*\
+Figure 1:*
+
+![](images/Screen%20Shot%202021-04-29%20at%204.20.48%20PM.png)
+
+*Figure 2:*
+
+![](images/Screen%20Shot%202021-04-29%20at%204.24.16%20PM.png)
+
+An observation which took the researchers by surprise was that the trending videos in Great Britain had a far greater range and a higher mean value (otherwise known as the average value) for both likes and views. They thought that a country with a much larger population like the United States would have higher maximum values and averages for the count of views and likes. 
+
+An important factor to keep in mind when investigating this data is that not all countries have the same amount of observations. In addition, these observations (335,203 in total) do not make up all of YouTube's trending videos. This data serves as a sample taken from randomly selected days. As a result, there remains the possibility for some sort of sampling error, which would mean the data does not reflect reality accurately.
+
+Nevertheless, there is plenty of evidence to support the notion that country population is not the only determiner for the amount of YouTube views and likes. Access to the internet is not equal across different countries. According to Google, India's population in 2017 was 1.339 billion, yet only 34.4 percent of its population uses the internet. This can have a significant effect on these YouTube statistics. 
+
+In order to determine if users in different countries interact with trending videos differently, the researchers considered how correlations between views and likes compare amongst these regions.
+
+While view counts represent the passive action of watching a video, likes can show the amount of people who take the active step of showing their opinion with a single click. 
+
+Overall, a moderately strong positive correlation was found between views and likes, which intuitively makes sense. The more people who view a video, the more one would expect people to like the video as well. Figure 3 exhibits a visual representation of this correlation.
+
+*Figure 3:*
+
+![](images/Screen%20Shot%202021-04-29%20at%204.28.05%20PM.png)
+
+While there was some variance among the different countries, which is to be expected, all countries exhibited a moderate to strong positive correlation from Great Britain, who had the least correlation at 0.7959, to South Korea with the strongest at 0.8600.
+
+While there are still many other factors and values which are not considered in this analysis, like dislikes and amount of comments, this initial look at user interactivity proposes that when it comes to the way people from different countries respond and react to popular videos, there may not be a drastic difference. 
+
+The table below lists the countries with their corresponding correlations. 
+
+*Figure 4:*
+
+![](images/Screen%20Shot%202021-04-29%20at%204.29.45%20PM.png)
+
+Beyond the way in which users interact with trending videos, researchers also wanted to know if the popularity of genres differed for separate countries. Using the average amount of views, they determined the popularity of each category for the overall data set as well as for each country. 
+
+When looking at the data in total, the "Music" category was without question the most popular with over 6 million views on average. "Music" was followed by "Movies" at around 2 million and "Film and Animation" at 1.6 million. 
+
+Figure 5 shows a visual representation of these findings. 
+
+*Figure 5:*
+
+![](images/Screen%20Shot%202021-04-29%20at%204.31.25%20PM.png)
+
+In a couple of countries, the popularity of certain categories remained relatively the same, yet some demonstrated drastic differences. 
+
+Countries like the United States, Denmark, France, and Great Britain maintained genre popularity which matched the overall findings, where "Music" was determined to be hands down the most popular. 
+
+Other countries were a bit more surprising, deviating from the overall findings. For example, the most popular genre in India was "Gaming" with over 4 million views on average, followed by "Movies" and then "Music" in third. 
+
+*Figure 6:*
+
+![](images/Screen%20Shot%202021-04-29%20at%204.32.55%20PM.png)\
+In South Korea and Japan, "Science & Fantasy" spiked as the top genre.
+
+\
+*Figure 7 & 8:*
+
+![](images/Screen%20Shot%202021-04-29%20at%204.35.02%20PM.png)\
+
+These differences in genre popularity could indicate a difference in the types of content these societies value for entertainment. For instance, since gaming videos in India are so popular, an abundance of internet users in India may also be gamers. In South Korea and Japan, anime and science fiction are very popular culturally, so that may be why the "Science & Fantasy" genre is so much higher.
+
+\
+Further analysis would need to be done in order to prove any significant links between the country's society and popular YouTube videos. Nevertheless, this study reveals some thought-provoking, basic findings concerning the similarities of user interaction from different countries as well as the stark differences in most popular categories. 
