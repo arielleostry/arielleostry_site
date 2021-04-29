@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>My Portfolio </title>
+    <link>https://arielleostry.netlify.app/</link>
+    <atom:link href="https://arielleostry.netlify.app/index.xml" rel="self" type="application/rss+xml"/>
+    <description>My Portfolio 
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Tue, 20 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Mapping out DC Landmarks</title>
+      <dc:creator>Arielle Ostry</dc:creator>
+      <link>https://arielleostry.netlify.app/posts/2021-04-13-my-second-post</link>
+      <description>This short project showcases where certain famous DC landmarks are located in the District.</description>
+      <category>data</category>
+      <category>maps</category>
+      <guid>https://arielleostry.netlify.app/posts/2021-04-13-my-second-post</guid>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Company Complaints Analysis</title>
+      <dc:creator>Arielle Ostry</dc:creator>
+      <link>https://arielleostry.netlify.app/posts/2021-04-13-my-first-post</link>
+      <description>These charts and data tables pull out and visualize key elements of a consumer complaints report from 2020.</description>
+      <category>financial</category>
+      <category>data</category>
+      <category>charts</category>
+      <guid>https://arielleostry.netlify.app/posts/2021-04-13-my-first-post</guid>
+      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Welcome to my site</title>
+      <dc:creator>Arielle Ostry</dc:creator>
+      <link>https://arielleostry.netlify.app/posts/2021-04-20-welcome-to-my-site</link>
+      <description>Welcome to Arielle Ostry’s data journalism portfolio. This site is a culmination of the work and skills Arielle has gained throughout her Reporting in the Digital Agee class at The George Washington University’s School of Media and Public Affairs.</description>
+      <guid>https://arielleostry.netlify.app/posts/2021-04-20-welcome-to-my-site</guid>
+      <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
