@@ -9,6 +9,10 @@ date: 04-29-2021
 output:
   distill::distill_article:
     self_contained: false
+categories:
+  - data
+  - charts
+  - political
 ---
 
 
