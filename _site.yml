@@ -20,6 +20,8 @@ navbar:
           href: 
         - text: "Estuaries Week"
           href: "https://estuaries.org/little-acts-for-estuaries-week/"
+        - text: "AMPLIFY site: Senior Capstone"
+          href: "https://2021journworkshop.wixsite.com/website"
 output: distill::distill_article
 collections:
   posts:

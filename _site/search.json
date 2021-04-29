@@ -5,7 +5,7 @@
       "title": "About me",
       "author": [],
       "contents": "\nArielle Ostry is a graduating senior at The George Washington University studying journalism and dance. This site, created through Distill, shows Arielle’s capabilities in data visualization after completing her advanced news reporting course on reporting in a digital world. Arielle sports a variety of topical interests, and particularly enjoys projects focused on environmental advocacy. If you have any questions about Arielle’s work, you can contact her through LinkedIn or Twitter.\n\n\n\n",
-      "last_modified": "2021-04-29T15:29:18-04:00"
+      "last_modified": "2021-04-29T15:32:38-04:00"
     },
     {
       "path": "experience.html",
@@ -19,14 +19,14 @@
       ],
       "date": "`r Sys.Date()`",
       "contents": "\nArielle Ostry is a graduating senior at The George Washington University looking for work opportunities where she can combine her passion for storytelling with the knowledge and technical skills she has developed while studying at GW’s School of Media and Public Affairs and Corcoran School of the Arts and Design.\nEducation\nThe George Washington University, Bachelor of the Arts in Journalism & Mass Communication and Dance (May 2021)\nWork Experience\nAssistant Editor at NYOTA Magazine\n(Oct 2019 - Present)\nCollaborated with the Chief Editor of NYOTA Magazine to develop a cohesive and consistent style for the quarterly publication.\nEdited transcribed interview pieces as well as articles featured in the culture, music, and art sections of the magazine, checking for grammar and spelling typos.\nPitched story and marketing ideas to the editorial team for future issues.\nResearch and Communications Assistant at Restore America’s Estuaries\n(Aug 2020 - Dec 2020)\nPitched and wrote blog posts for website on estuaries and community organizing.\nCurated social media content to inform and educate public during National Estuaries Week.\nDeveloped video content for website and social media platforms to engage RAE’s audience.\nAssisted CEO in legislative research and messaging for Congressional outreach.\nWriter for danceviewtimes\n(Jan 2018 - Aug 2020)\nWrote reviews of dance performances at the Kennedy Center and Dance Place for an online dance publication.\nCommunicated with DC arts venues concerning information on performances and ticket requests.\nConducted research on dance companies and performances in order to construct accurate and insightful content.\nCommunications Assistant at The Corcoran School of the Arts and Design\n(May 2018 - Dec 2019)\nWrote content for marketing materials including postcards, brochures, and email blasts to improve the visibility of degree programs and initiatives.\nMaintained Corcoran School’s social media accounts to advertise events and promote student engagement.\nCreated blog posts on Corcoran website using GW Drupal to highlight student and faculty success, as well as provide updates on Corcoran-related news.\nReplied to emails from public to answer inquiries about the Corcoran school and exhibitions.\nEditorial Communications Intern at The John F. Kennedy Center for the Performing Arts\n(Jan 2019 - May 2019)\nCreated copy for radio, online ads, print brochures and postcards to market Kennedy Center programming.\nDesigned engaging email campaigns to inform public about Kennedy Center performances and events.\nMade updates on website to maintain the accuracy of event pages and blurbs.\n\n\n\n",
-      "last_modified": "2021-04-29T15:29:19-04:00"
+      "last_modified": "2021-04-29T15:32:38-04:00"
     },
     {
       "path": "index.html",
       "title": "My Portfolio ",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-04-29T15:29:19-04:00"
+      "last_modified": "2021-04-29T15:32:39-04:00"
     },
     {
       "path": "skills.html",
@@ -40,7 +40,7 @@
       ],
       "date": "`r Sys.Date()`",
       "contents": "\nArielle has developed a variety of skills and certifications throughout her student career at GW in preparation for entering the workforce. You can the skills and tools she is familiar with listed below.\nIndustry Knowledge\nResearch\nData Analysis\nCreative Writing\nCommunity Outreach\nWriting/Blogging\nEditing\nDigital Marketing\nRadio\nVideo Editing\nTools & Technologies\nMicrosoft Office\nAdobe Creative Cloud\nGoogle Analytics\nStata\nR\nHTML5\nCSS\nHootSuite\nMailChimp\nInterpersonal Skills\nPresenting\nTeaching\nLeadership\nFundraising\nCustomer Service\nOther Skills\nLifeguarding\nLeave No Trace Certified\nSocial Media Advertising\nEmail Newsletter Design\n\n\n\n",
-      "last_modified": "2021-04-29T15:29:20-04:00"
+      "last_modified": "2021-04-29T15:32:39-04:00"
     }
   ],
   "collections": ["posts/posts.json"]
