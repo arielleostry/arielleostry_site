@@ -4,11 +4,14 @@ description: |
   These charts and data tables pull out and visualize key elements of a consumer complaints report from 2020. 
 author:
   - name: Arielle Ostry
-    url: https://www.google.com
+    url: https://arielleostry.netlify.app/about.html
 date: 04-13-2021
 output:
   distill::distill_article:
     self_contained: false
+categories:
+  - financial
+  - charts
 ---
 
 
