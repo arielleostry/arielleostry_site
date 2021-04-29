@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
-  <link rel="alternate" type="application/rss+xml" href="https://arielleostry.netlify.app/index.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -86,26 +85,33 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>My Portfolio </title>
+  <title>My Portfolio : Experience</title>
+
+  <meta property="description" itemprop="description" content="Learn more about Arielle&#39;s past experience in journalism and communication strategy."/>
 
 
-
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-04-29"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-04-29"/>
+  <meta name="article:author" content="Arielle Ostry"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="My Portfolio "/>
+  <meta property="og:title" content="My Portfolio : Experience"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Learn more about Arielle&#39;s past experience in journalism and communication strategy."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="My Portfolio "/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="My Portfolio "/>
+  <meta property="twitter:title" content="My Portfolio : Experience"/>
+  <meta property="twitter:description" content="Learn more about Arielle&#39;s past experience in journalism and communication strategy."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["My Portfolio "]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Experience"]},{"type":"character","attributes":{},"value":["Learn more about Arielle's past experience in journalism and communication strategy.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Arielle Ostry"]},{"type":"character","attributes":{},"value":["https://arielleostry.netlify.app/"]},{"type":"character","attributes":{},"value":["The George Washington University"]},{"type":"character","attributes":{},"value":["https://www.gwu.edu/"]}]}]},{"type":"character","attributes":{},"value":["2021-04-29"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2045,12 +2051,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"My Portfolio ","authors":[]}
+{"title":"Experience","description":"Learn more about Arielle's past experience in journalism and communication strategy.","authors":[{"author":"Arielle Ostry","authorURL":"https://arielleostry.netlify.app/","affiliation":"The George Washington University","affiliationURL":"https://www.gwu.edu/","orcidID":""}],"publishedDate":"2021-04-29T00:00:00.000+00:00","citationText":"Ostry, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2084,242 +2090,62 @@ Work Samples
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="My Portfolio ">My Portfolio </h1>
-<a href="posts/2021-04-13-my-second-post/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["data","maps"]}</script>
-<div class="metadata">
-<div class="publishedDate">April 20, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Arielle Ostry</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Mapping out DC Landmarks</h2>
-<div class="dt-tags">
-<div class="dt-tag">data</div>
-<div class="dt-tag">maps</div>
-</div>
-<p>This short project showcases where certain famous DC landmarks are located in the District.</p>
-</div>
-</a>
-<a href="posts/2021-04-13-my-first-post/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["financial","data","charts"]}</script>
-<div class="metadata">
-<div class="publishedDate">April 13, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Arielle Ostry</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Company Complaints Analysis</h2>
-<div class="dt-tags">
-<div class="dt-tag">financial</div>
-<div class="dt-tag">data</div>
-<div class="dt-tag">charts</div>
-</div>
-<p>These charts and data tables pull out and visualize key elements of a consumer complaints report from 2020.</p>
-</div>
-</a>
-<a href="posts/2021-04-20-welcome-to-my-site/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">April 12, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Arielle Ostry</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Welcome to my site</h2>
-<div class="dt-tags"></div>
-<p>Welcome to Arielle Ostry’s data journalism portfolio. This site is a culmination of the work and skills Arielle has gained throughout her Reporting in the Digital Agee class at The George Washington University’s School of Media and Public Affairs.</p>
-</div>
-</a>
-</div>
-<div class="posts-sidebar">
-<div class="sidebar-section categories">
-<h3>Categories</h3>
-<ul>
-<li>
-<a href="#category:articles">articles</a>
-<span class="category-count">(3)</span>
-</li>
-<li>
-<a href="#category:charts">charts</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:data">data</a>
-<span class="category-count">(2)</span>
-</li>
-<li>
-<a href="#category:financial">financial</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:maps">maps</a>
-<span class="category-count">(1)</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>My Portfolio</h1>
+<h1>Experience</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>Learn more about Arielle’s past experience in journalism and communication strategy.</p></p>
 </div>
 
+<div class="d-byline">
+  Arielle Ostry <a href="https://arielleostry.netlify.app/" class="uri">https://arielleostry.netlify.app/</a> (The George Washington University)<a href="https://www.gwu.edu/" class="uri">https://www.gwu.edu/</a>
+  
+<br/>2021-04-29
+</div>
 
 <div class="d-article">
+<p>Arielle Ostry is a graduating senior at The George Washington University looking for work opportunities where she can combine her passion for storytelling with the knowledge and technical skills she has developed while studying at GW’s School of Media and Public Affairs and Corcoran School of the Arts and Design.</p>
+<p><strong>Education</strong></p>
+<p><strong>The George Washington University</strong>, Bachelor of the Arts in Journalism &amp; Mass Communication and Dance <em>(May 2021)</em></p>
+<p><strong>Work Experience</strong></p>
+<p>Assistant Editor at <a href="http://nyotamagazine.com/">NYOTA Magazine</a></p>
+<p>(Oct 2019 - Present)</p>
+<ul>
+<li><p><em>Collaborated with the Chief Editor of NYOTA Magazine to develop a cohesive and consistent style for the quarterly publication.</em></p></li>
+<li><p><em>Edited transcribed interview pieces as well as articles featured in the culture, music, and art sections of the magazine, checking for grammar and spelling typos.</em></p></li>
+<li><p><em>Pitched story and marketing ideas to the editorial team for future issues.</em></p></li>
+</ul>
+<p>Research and Communications Assistant at <a href="https://estuaries.org/">Restore America’s Estuaries</a></p>
+<p>(Aug 2020 - Dec 2020)</p>
+<ul>
+<li><p><em>Pitched and wrote blog posts for website on estuaries and community organizing.</em></p></li>
+<li><p><em>Curated social media content to inform and educate public during National Estuaries Week.</em></p></li>
+<li><p><em>Developed video content for website and social media platforms to engage RAE’s audience.</em></p></li>
+<li><p><em>Assisted CEO in legislative research and messaging for Congressional outreach.</em></p></li>
+</ul>
+<p>Writer for <a href="https://www.danceviewtimes.com/">danceviewtimes</a></p>
+<p>(Jan 2018 - Aug 2020)</p>
+<ul>
+<li><p><em>Wrote reviews of dance performances at the Kennedy Center and Dance Place for an online dance publication.</em></p></li>
+<li><p><em>Communicated with DC arts venues concerning information on performances and ticket requests.</em></p></li>
+<li><p><em>Conducted research on dance companies and performances in order to construct accurate and insightful content.</em></p></li>
+</ul>
+<p>Communications Assistant at <a href="https://corcoran.gwu.edu/">The Corcoran School of the Arts and Design</a></p>
+<p>(May 2018 - Dec 2019)</p>
+<ul>
+<li><p><em>Wrote content for marketing materials including postcards, brochures, and email blasts to improve the visibility of degree programs and initiatives.</em></p></li>
+<li><p><em>Maintained Corcoran School’s social media accounts to advertise events and promote student engagement.</em></p></li>
+<li><p><em>Created blog posts on Corcoran website using GW Drupal to highlight student and faculty success, as well as provide updates on Corcoran-related news.</em></p></li>
+<li><p><em>Replied to emails from public to answer inquiries about the Corcoran school and exhibitions.</em></p></li>
+</ul>
+<p>Editorial Communications Intern at <a href="https://www.kennedy-center.org/">The John F. Kennedy Center for the Performing Arts</a></p>
+<p>(Jan 2019 - May 2019)</p>
+<ul>
+<li><p><em>Created copy for radio, online ads, print brochures and postcards to market Kennedy Center programming.</em></p></li>
+<li><p><em>Designed engaging email campaigns to inform public about Kennedy Center performances and events.</em></p></li>
+<li><p><em>Made updates on website to maintain the accuracy of event pages and blurbs.</em></p></li>
+</ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

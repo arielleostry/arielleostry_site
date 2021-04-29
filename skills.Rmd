@@ -1,0 +1,80 @@
+---
+title: "Skills"
+description: Check out Arielle's skills!
+  
+author:
+  - name: Arielle Ostry 
+    url: https://arielleostry.netlify.app/
+    affiliation: The George Washington University
+    affiliation_url: https://www.gwu.edu/
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Arielle has developed a variety of skills and certifications throughout her student career at GW in preparation for entering the workforce. You can the skills and tools she is familiar with listed below.
+
+**Industry Knowledge**
+
+-   Research
+
+-   Data Analysis
+
+-   Creative Writing
+
+-   Community Outreach
+
+-   Writing/Blogging
+
+-   Editing
+
+-   Digital Marketing
+
+-   Radio
+
+-   Video Editing
+
+**Tools & Technologies**
+
+-   Microsoft Office
+
+-   Adobe Creative Cloud
+
+-   Google Analytics
+
+-   Stata
+
+-   R
+
+-   HTML5
+
+-   CSS
+
+-   HootSuite
+
+-   MailChimp
+
+**Interpersonal Skills**
+
+-   Presenting
+
+-   Teaching
+
+-   Leadership
+
+-   Fundraising
+
+-   Customer Service
+
+**Other Skills**
+
+-   Lifeguarding
+
+-   Leave No Trace Certified
+
+-   Social Media Advertising
+
+-   Email Newsletter Design
