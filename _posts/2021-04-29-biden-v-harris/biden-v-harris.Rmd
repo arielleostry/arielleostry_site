@@ -31,6 +31,8 @@ We want to take a look at the proportion of event types hosted by different poli
 
 Let's start with Biden. We filtered for his events in our data set, grouped by event type, and then chose the 5 top event types to highlight.
 
+
+
 ```{r}
 TopBiden <- events %>% filter(cand_lastname == "Biden") %>% 
   group_by(event_type) %>% 
@@ -41,9 +43,13 @@ TopBiden <- events %>% filter(cand_lastname == "Biden") %>%
 head(TopBiden)
 ```
 
+
+
 Now that we have this information, we can create a donut chart to visually show the proportion of campaign events Biden commonly participates in.
 
 As you can see, Biden's most popular event type are event speeches, followed by cattle calls and forums, but these are both scheduled far less often in comparison to event speeches. 
+
+
 
 ```{r}
 fig1 <- TopBiden %>% plot_ly(labels = ~event_type, values = ~n)
@@ -61,7 +67,11 @@ fig1
 
 ```
 
+
+
 Moving onto Kamala Harris, we can adopt much of the same strategy, just filtering for Harris events instead of Biden events in order to come up with the top 5 event types for her campaign.
+
+
 
 ```{r}
 TopHarris <- events %>% filter(cand_lastname == "Harris") %>% 
@@ -73,7 +83,11 @@ TopHarris <- events %>% filter(cand_lastname == "Harris") %>%
 head(TopHarris)
 ```
 
+
+
 There is a great deal of similarity to Biden in the popularity of event speeches, but her top 5 includes book tours, which did not appear on Biden's list, as well as town halls. 
+
+
 
 ```{r}
 fig2 <- TopHarris %>% plot_ly(labels = ~event_type, values = ~n)
@@ -90,7 +104,11 @@ fig2 <- fig2 %>% layout(
 fig2
 ```
 
+
+
 Now let's take a look at the same analysis done on Bernie Sanders' campaign events:
+
+
 
 ```{r}
 TopSanders <- events %>% filter(cand_lastname == "Sanders") %>% 
@@ -102,11 +120,15 @@ TopSanders <- events %>% filter(cand_lastname == "Sanders") %>%
 head(TopSanders)
 ```
 
+
+
 Taking the same approach as the previous two cases, we can develop a chart to see the potential differences in event types. 
 
 Sanders' event chart looks a lot more different than Biden and Harris, and this may be partially due to funding but also due to his style as a politician. 
 
 In this case, we see that Sanders participates in less formal event speeches, instead opting more for rallies, town halls, and other forums. 
+
+
 
 ```{r}
 fig3 <- TopSanders %>% plot_ly(labels = ~event_type, values = ~n)
