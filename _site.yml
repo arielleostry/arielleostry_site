@@ -20,6 +20,8 @@ navbar:
           href: kamala-campaign-trips.html
         - text: "Estuaries Week"
           href: "https://estuaries.org/little-acts-for-estuaries-week/"
+        - text: "Kennedy Center Review"
+          href: "https://www.danceviewtimes.com/2019/09/the-reach-opening-festival.html"
         - text: "AMPLIFY site: Senior Capstone"
           href: "https://2021journworkshop.wixsite.com/website"
 output: distill::distill_article

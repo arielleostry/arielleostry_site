@@ -1,7 +1,7 @@
 ---
 title: "Welcome to my site"
 description: |
-  Welcome to Arielle Ostry’s data journalism portfolio. This site is a culmination of the work and skills Arielle has gained throughout her Reporting in the Digital Agee class at The George Washington University’s School of Media and Public Affairs.
+  Welcome to Arielle Ostry’s data journalism portfolio. This site is a culmination of the work and skills Arielle has gained throughout her Reporting in the Digital Age class at The George Washington University’s School of Media and Public Affairs.
 author:
   - name: Arielle Ostry
     url: https://ostryarielle.wixsite.com/mysite
