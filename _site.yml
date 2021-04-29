@@ -19,9 +19,9 @@ navbar:
         - text: "Trending Video Analysis"
           href: trending-youtube.html
         - text: "Campaign Event Type Comparison"
-          href: biden-v-harris.html
+          href: "https://arielleostry.netlify.app/posts/2021-04-29-biden-v-harris/"
         - text: "Harris Campaign Trips"
-          href: kamala-campaign-trips.html
+          href: "https://arielleostry.netlify.app/posts/2021-04-29-kamala-campaign-trips/"
         - text: "Estuaries Week"
           href: "https://estuaries.org/little-acts-for-estuaries-week/"
         - text: "Kennedy Center Review"
