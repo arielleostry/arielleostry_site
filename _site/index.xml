@@ -7,7 +7,15 @@
     <description>My Portfolio 
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 20 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Kamala Harris Campaign Trips</title>
+      <dc:creator>Arielle Ostry</dc:creator>
+      <link>https://arielleostry.netlify.app/posts/2021-04-29-kamala-campaign-trips</link>
+      <description>Analyzing Kamala Harris' campaign events.</description>
+      <guid>https://arielleostry.netlify.app/posts/2021-04-29-kamala-campaign-trips</guid>
+      <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Mapping out DC Landmarks</title>
       <dc:creator>Arielle Ostry</dc:creator>

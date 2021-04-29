@@ -16,8 +16,8 @@ navbar:
       href: skills.html
     - text: "Work Samples"
       menu:
-        - text: "Campaign Trips"
-          href: 
+        - text: "Harris Campaign Trips"
+          href: kamala-campaign-trips.html
         - text: "Estuaries Week"
           href: "https://estuaries.org/little-acts-for-estuaries-week/"
         - text: "AMPLIFY site: Senior Capstone"

@@ -1,0 +1,54 @@
+---
+title: "Kamala Harris Campaign Trips"
+description: |
+  Analyzing Kamala Harris' campaign events. 
+author:
+  - name: Arielle Ostry
+    url: https://ostryarielle.wixsite.com/mysite
+date: 04-29-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(flexdashboard)
+library(tidyverse)
+library(lubridate)
+library(plotly)
+
+
+
+events <- readRDS("events_saved.rds")
+```
+
+We wanted to see the amount of events Kamala Harris attended each month while running for President in the 2020 election cycle. In order to do so, we filtered out for just Harris' events in our campaign events data set and then made a new column pulling out the month from the date column.
+
+We then grouped the events by month in preparation for making a figure to visually show when Harris' campaign events took place.
+
+```{r}
+events_month <- events %>% mutate(month(date))
+
+Kamala_months <- events_month %>% filter(cand_lastname == "Harris") %>% 
+  group_by(month(date)) %>% 
+  count(month = month(date))
+
+head(Kamala_months)
+```
+
+
+We then decided to make a bar graph to show when Harris had the most campaign trips out of the year. This chart shows the most events were held in April, and no events were held in September and October. 
+
+
+```{r}
+figure1 <- Kamala_months %>% plot_ly(x = ~month, y = ~n, type = "bar")
+
+figure1_title <- figure1 %>% layout(title = "Total Trips Each Month by Harris")
+
+figure1_title
+
+```
+
