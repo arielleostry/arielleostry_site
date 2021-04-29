@@ -18,6 +18,8 @@ navbar:
       menu:
         - text: "Trending Video Analysis"
           href: trending-youtube.html
+        - text: "Campaign Event Type Comparison"
+          href: biden-v-harris.html
         - text: "Harris Campaign Trips"
           href: kamala-campaign-trips.html
         - text: "Estuaries Week"
